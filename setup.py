@@ -23,7 +23,7 @@ setup(
         name = 'gmailnator.py',
         version = '1.0.0',
         description = 'Python wrapper to access Gmailnator programmatically',
-        long_description = open('README.md').read(),
+        long_description = open('README').read(),
         long_description_content_type = 'text/markdown',
         url = 'https://github.com/L3afMe/Gmailnator.py',
         author = 'L3afMe',
