@@ -1,6 +1,6 @@
 # ##############################################################################
 #                                                                              #
-#  Gmailnator.py - gmailnator.py                                                            #
+#  Clover - __init__.py                                                        #
 #  Copyright (C) 2020 L3af                                                     #
 #                                                                              #
 #  This program is free software: you can redistribute it and/or modify it     #
@@ -29,7 +29,7 @@ from requests import Response
 def get_token(html: str) -> Optional[str]:
     """
     Extracts csrf token from gmailnator HTML body
-    
+
     :param html: HTML body to extract csrf token from
     :return: csrf token if found, else None
     """
@@ -51,7 +51,7 @@ def get_new_csrf_token(email: str) -> Optional[str]:
 def generate_email() -> Optional[Tuple[str, str]]:
     """
     Generates csrf token and email address
-    
+
     :return: csrf token and email address
     """
     
@@ -91,7 +91,7 @@ def generate_email() -> Optional[Tuple[str, str]]:
 def check_emails(csrf_token: str, email: str) -> Optional[List[Dict[str, str]]]:
     """
     Gets mail from specified email
-    
+
     :param csrf_token: token generated alongside with email
     :param email: email to get mail from
     :return: List of mail in mailbox
@@ -140,7 +140,7 @@ def check_emails(csrf_token: str, email: str) -> Optional[List[Dict[str, str]]]:
 def get_message(mail_link: str, csrf_token: str) -> Optional[str]:
     """
     Gets full body from main link
-    
+
     :param mail_link: Mail link to get details from
     :param csrf_token: csrf token generated alongside the email address
     :return: HTML mail body as string
