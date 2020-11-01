@@ -21,7 +21,7 @@ from setuptools import setup
 
 setup(
         name = 'gmailnator.py',
-        version = '1.0.0',
+        version = '1.0.1',
         description = 'Python wrapper to access Gmailnator programmatically',
         long_description = open('README').read(),
         long_description_content_type = 'text/markdown',

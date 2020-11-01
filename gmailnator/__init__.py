@@ -154,7 +154,6 @@ def get_message(mail_link: str, csrf_token: str) -> Optional[str]:
     
     body: str = f'csrf_gmailnator_token={parse.quote_plus(csrf_token)}&action=get_message' \
                 f'&message_id={parse.quote_plus(message_id)}&email={parse.quote_plus(email)}'
-    print(body)
     
     res: Response = requests.post(f'https://gmailnator.com/mailbox/get_single_message', data = body, headers = {
         'Accept'          : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
