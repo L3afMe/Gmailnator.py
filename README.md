@@ -2,6 +2,8 @@
 
 ## Temporary fix by [bgbusted](https://github.com/bgbusted) until I get around to fixing the original version
 
+## If you're [still having issues] after reimplementing, make sure you have made the following command (to [upgrade and update] Gmailnator.py)```pip install -U git+git://github.com/L3afMe/Gmailnator.py.git```
+
 Python wrapper to access [Gmailnator](https://gmailnator.com/) programmatically
 
 ---
@@ -23,6 +25,7 @@ Never use temporary mail for important information. It is a public email and can
 ## Example
 
 ```python
+from gmailnator import Gmailnator
 Gmailnator = Gmailnator()
 gmailEmail = Gmailnator.getEmail()
 
