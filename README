@@ -2,7 +2,8 @@
 
 Gmailnator.py
 =============
-
+'If you're [still having issues] after reimplementing, make sure you have made the following command (to [upgrade and update] Gmailnator.py)pip install -U git+git://github.com/L3afMe/Gmailnator.py.git'
+'Temp version by @bgbusted'
 Python wrapper to access `Gmailnator`_ programmatically
 
 --------------
@@ -39,19 +40,11 @@ Example
 
 .. code:: python
 
-   import gmailnator
+   from gmailnator import Gmailnator
+   Gmailnator = Gmailnator()
+   gmailEmail = Gmailnator.getEmail()
 
-   csrf_token, email = gmailnator.generate_email()
-   print(f'Email: {email}')
-   print(f'Token: {csrf_token}')
-   input('Send email, wait a few minutes to ensure that it has been received then press enter to continue...')
-   emails = gmailnator.check_emails(csrf_token, email)
-   print(f'Got {len(emails)} emails')
-   for mail in emails:
-       print(f'Subject: {mail["subject"]}')
-       print(f'Body: {mail["body"]}')
-       print(f'Link: {mail["link"]}')
-       print(f'Time: {mail["time"]}')
-       print(f'Full body: {gmailnator.get_message(mail["link"], csrf_token)}')
+   print(gmailEmail)
+   print(Gmailnator.receiveInbox())
 
 .. _Gmailnator: https://gmailnator.com/
